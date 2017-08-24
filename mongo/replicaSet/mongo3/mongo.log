@@ -1,0 +1,590 @@
+2017-06-07T13:08:35.121+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] MongoDB starting : pid=9364 port=27019 dbpath=/Users/amit/mongo/replicaSet/mongo3/data/db 64-bit host=Amits-Air
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] db version v3.4.4
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] git version: 888390515874a9debd1b6c5d36559ca86b44babd
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2l  25 May 2017
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] allocator: system
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] modules: none
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] build environment:
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-06-07T13:08:35.172+0800 I CONTROL  [initandlisten] options: { config: "/Users/amit/mongo/replicaSet/mongo3/conf.yml", net: { bindIp: "127.0.0.1", port: 27019 }, replication: { replSetName: "rs0" }, security: { keyFile: "/Users/amit/mongo/replicaSet/mongo3/keyfile.txt" }, storage: { dbPath: "/Users/amit/mongo/replicaSet/mongo3/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/amit/mongo/replicaSet/mongo3/mongo.log" } }
+2017-06-07T13:08:35.173+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-06-07T13:08:35.508+0800 I CONTROL  [initandlisten] 
+2017-06-07T13:08:35.508+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2017-06-07T13:08:35.588+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/amit/mongo/replicaSet/mongo3/data/db/diagnostic.data'
+2017-06-07T13:08:35.697+0800 I REPL     [initandlisten] Did not find local voted for document at startup.
+2017-06-07T13:08:35.697+0800 I REPL     [initandlisten] Did not find local replica set configuration document at startup;  NoMatchingDocument: Did not find replica set configuration document in local.system.replset
+2017-06-07T13:08:35.698+0800 I NETWORK  [thread1] waiting for connections on port 27019
+2017-06-07T13:24:06.250+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58090 #1 (1 connection now open)
+2017-06-07T13:24:06.255+0800 I ACCESS   [conn1] note: no users configured in admin.system.users, allowing localhost access
+2017-06-07T13:24:06.270+0800 I ACCESS   [conn1] Successfully authenticated as principal __system on local
+2017-06-07T13:24:06.270+0800 I -        [conn1] end connection 127.0.0.1:58090 (1 connection now open)
+2017-06-07T13:24:06.280+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58094 #2 (1 connection now open)
+2017-06-07T13:24:06.284+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:58094 conn2: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-06-07T13:24:06.315+0800 I ACCESS   [conn2] Successfully authenticated as principal __system on local
+2017-06-07T13:24:06.319+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-06-07T13:24:06.550+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27017, took 231ms (1 connections now open to localhost:27017)
+2017-06-07T13:24:08.598+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58102 #3 (2 connections now open)
+2017-06-07T13:24:08.623+0800 I ACCESS   [conn3] Successfully authenticated as principal __system on local
+2017-06-07T13:24:08.623+0800 I -        [conn3] end connection 127.0.0.1:58102 (2 connections now open)
+2017-06-07T13:24:08.685+0800 I REPL     [replExecDBWorker-0] Starting replication storage threads
+2017-06-07T13:24:08.874+0800 I REPL     [replication-0] Starting initial sync (attempt 1 of 10)
+2017-06-07T13:24:08.874+0800 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "rs0", version: 1, protocolVersion: 1, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('59378df6b6b7c67bb04f665a') } }
+2017-06-07T13:24:08.874+0800 I REPL     [ReplicationExecutor] This node is localhost:27019 in the config
+2017-06-07T13:24:08.874+0800 I REPL     [ReplicationExecutor] transition to STARTUP2
+2017-06-07T13:24:08.874+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-06-07T13:24:08.875+0800 I REPL     [ReplicationExecutor] Member localhost:27017 is now in state SECONDARY
+2017-06-07T13:24:08.895+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58106 #4 (2 connections now open)
+2017-06-07T13:24:08.895+0800 I NETWORK  [conn4] received client metadata from 127.0.0.1:58106 conn4: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-06-07T13:24:08.895+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27018, took 21ms (1 connections now open to localhost:27018)
+2017-06-07T13:24:08.900+0800 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state STARTUP2
+2017-06-07T13:24:08.906+0800 I ACCESS   [conn4] Successfully authenticated as principal __system on local
+2017-06-07T13:24:08.988+0800 I REPL     [replication-1] sync source candidate: localhost:27017
+2017-06-07T13:24:08.988+0800 I STORAGE  [replication-1] dropAllDatabasesExceptLocal 1
+2017-06-07T13:24:08.992+0800 I REPL     [replication-1] ******
+2017-06-07T13:24:08.992+0800 I REPL     [replication-1] creating replication oplog of size: 192MB...
+2017-06-07T13:24:09.020+0800 I STORAGE  [replication-1] Starting WiredTigerRecordStoreThread local.oplog.rs
+2017-06-07T13:24:09.020+0800 I STORAGE  [replication-1] The size storer reports that the oplog contains 0 records totaling to 0 bytes
+2017-06-07T13:24:09.020+0800 I STORAGE  [replication-1] Scanning the oplog to determine where to place markers for truncation
+2017-06-07T13:24:09.228+0800 I REPL     [replication-1] ******
+2017-06-07T13:24:09.232+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-06-07T13:24:09.253+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27017, took 21ms (1 connections now open to localhost:27017)
+2017-06-07T13:24:09.265+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-06-07T13:24:09.277+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27017, took 16ms (2 connections now open to localhost:27017)
+2017-06-07T13:24:09.288+0800 I REPL     [replication-0] CollectionCloner::start called, on ns:admin.system.version
+2017-06-07T13:24:09.369+0800 I INDEX    [InitialSyncInserters-admin.system.version0] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: "incompatible_with_version_32", ns: "admin.system.version" }
+2017-06-07T13:24:09.369+0800 I INDEX    [InitialSyncInserters-admin.system.version0] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-06-07T13:24:09.405+0800 I INDEX    [InitialSyncInserters-admin.system.version0] build index on: admin.system.version properties: { v: 1, key: { _id: 1 }, name: "_id_", ns: "admin.system.version" }
+2017-06-07T13:24:09.407+0800 I INDEX    [InitialSyncInserters-admin.system.version0] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2017-06-07T13:24:09.407+0800 I COMMAND  [InitialSyncInserters-admin.system.version0] setting featureCompatibilityVersion to 3.4
+2017-06-07T13:24:09.452+0800 I REPL     [replication-0] No need to apply operations. (currently at { : Timestamp 1496813046000|1 })
+2017-06-07T13:24:09.453+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending connection to host localhost:27017 due to bad connection status; 1 connections to that host remain open
+2017-06-07T13:24:09.453+0800 I REPL     [replication-0] Finished fetching oplog during initial sync: CallbackCanceled: Callback canceled. Last fetched optime and hash: { ts: Timestamp 1496813046000|1, t: -1 }[-2411143538025974029]
+2017-06-07T13:24:09.453+0800 I REPL     [replication-0] Initial sync attempt finishing up.
+2017-06-07T13:24:09.453+0800 I REPL     [replication-0] Initial Sync Attempt Statistics: { failedInitialSyncAttempts: 0, maxFailedInitialSyncAttempts: 10, initialSyncStart: new Date(1496813048873), initialSyncAttempts: [], fetchedMissingDocs: 0, appliedOps: 0, initialSyncOplogStart: Timestamp 1496813046000|1, initialSyncOplogEnd: Timestamp 1496813046000|1, databases: { databasesCloned: 1, admin: { collections: 1, clonedCollections: 1, start: new Date(1496813049277), end: new Date(1496813049451), elapsedMillis: 174, admin.system.version: { documentsToCopy: 1, documentsCopied: 1, indexes: 2, fetchedBatches: 1, start: new Date(1496813049288), end: new Date(1496813049451), elapsedMillis: 163 } } } }
+2017-06-07T13:24:09.507+0800 I REPL     [replication-0] initial sync done; took 0s.
+2017-06-07T13:24:09.507+0800 I REPL     [replication-0] Starting replication fetcher thread
+2017-06-07T13:24:09.507+0800 I REPL     [replication-0] Starting replication applier thread
+2017-06-07T13:24:09.507+0800 I REPL     [replication-0] Starting replication reporter thread
+2017-06-07T13:24:09.507+0800 I REPL     [rsSync] transition to RECOVERING
+2017-06-07T13:24:09.507+0800 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-06-07T13:24:09.507+0800 I REPL     [rsSync] transition to SECONDARY
+2017-06-07T13:24:14.511+0800 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state SECONDARY
+2017-06-07T13:24:17.517+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58122 #5 (3 connections now open)
+2017-06-07T13:24:17.519+0800 I NETWORK  [conn5] received client metadata from 127.0.0.1:58122 conn5: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-06-07T13:24:17.540+0800 I ACCESS   [conn5] Successfully authenticated as principal __system on local
+2017-06-07T13:24:19.512+0800 I REPL     [ReplicationExecutor] Member localhost:27017 is now in state PRIMARY
+2017-06-07T13:24:19.527+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27017
+2017-06-07T13:24:19.541+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-06-07T13:24:19.566+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27017, took 26ms (2 connections now open to localhost:27017)
+2017-06-07T13:25:17.503+0800 I -        [conn2] end connection 127.0.0.1:58094 (3 connections now open)
+2017-06-07T13:48:54.779+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58484 #6 (3 connections now open)
+2017-06-07T13:48:54.809+0800 I ACCESS   [conn6] Successfully authenticated as principal adminUser on admin
+2017-06-07T13:48:54.843+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58485 #7 (4 connections now open)
+2017-06-07T13:48:54.865+0800 I ACCESS   [conn7] Successfully authenticated as principal adminUser on admin
+2017-06-07T13:48:54.873+0800 I ACCESS   [conn6] Unauthorized: not authorized on db to execute command { serverStatus: "1" }
+2017-06-07T13:48:55.965+0800 I -        [conn6] end connection 127.0.0.1:58484 (4 connections now open)
+2017-06-07T13:48:55.967+0800 I -        [conn7] end connection 127.0.0.1:58485 (3 connections now open)
+2017-06-07T13:48:58.037+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58488 #8 (3 connections now open)
+2017-06-07T13:48:58.066+0800 I ACCESS   [conn8] Successfully authenticated as principal adminUser on admin
+2017-06-07T13:48:58.096+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:58489 #9 (4 connections now open)
+2017-06-07T13:48:58.114+0800 I ACCESS   [conn9] Successfully authenticated as principal adminUser on admin
+2017-06-07T13:48:58.120+0800 I ACCESS   [conn8] Unauthorized: not authorized on db to execute command { serverStatus: "1" }
+2017-06-07T15:05:21.571+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60153 #10 (5 connections now open)
+2017-06-07T15:05:21.597+0800 I ACCESS   [conn10] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:05:21.644+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60154 #11 (6 connections now open)
+2017-06-07T15:05:21.670+0800 I ACCESS   [conn11] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:05:42.170+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60157 #12 (7 connections now open)
+2017-06-07T15:05:42.197+0800 I ACCESS   [conn12] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:05:42.244+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60158 #13 (8 connections now open)
+2017-06-07T15:05:42.269+0800 I ACCESS   [conn13] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:05:46.934+0800 I -        [conn10] end connection 127.0.0.1:60153 (8 connections now open)
+2017-06-07T15:05:46.936+0800 I -        [conn11] end connection 127.0.0.1:60154 (7 connections now open)
+2017-06-07T15:06:11.510+0800 I -        [conn12] end connection 127.0.0.1:60157 (6 connections now open)
+2017-06-07T15:06:11.512+0800 I -        [conn13] end connection 127.0.0.1:60158 (5 connections now open)
+2017-06-07T15:20:55.868+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60551 #14 (5 connections now open)
+2017-06-07T15:20:55.886+0800 I ACCESS   [conn14] Successfully authenticated as principal __system on local
+2017-06-07T15:20:55.887+0800 I -        [conn14] end connection 127.0.0.1:60551 (5 connections now open)
+2017-06-07T15:20:55.894+0800 I REPL     [replication-0] Choosing new sync source because the config version supplied by localhost:27017, 2, does not match ours, 1
+2017-06-07T15:20:55.894+0800 I REPL     [replication-0] Canceling oplog query due to OplogQueryMetadata. We have to choose a new sync source. Current source: localhost:27017, OpTime { ts: Timestamp 1496820055000|1, t: 1 }, its sync source index:-1
+2017-06-07T15:20:55.894+0800 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27017 (config version: 2; last applied optime: { ts: Timestamp 1496820055000|1, t: 1 }; sync source index: -1; primary index: 0) is no longer valid
+2017-06-07T15:20:55.894+0800 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-06-07T15:20:55.913+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27017: InvalidSyncSource: Sync source was cleared. Was localhost:27017
+2017-06-07T15:20:55.923+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60555 #15 (5 connections now open)
+2017-06-07T15:20:55.944+0800 I ACCESS   [conn15] Successfully authenticated as principal __system on local
+2017-06-07T15:20:55.944+0800 I -        [conn15] end connection 127.0.0.1:60555 (5 connections now open)
+2017-06-07T15:20:55.945+0800 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "rs0", version: 2, protocolVersion: 1, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: true, priority: 0.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('59378df6b6b7c67bb04f665a') } }
+2017-06-07T15:20:55.946+0800 I REPL     [ReplicationExecutor] This node is localhost:27019 in the config
+2017-06-07T15:21:16.928+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27017
+2017-06-07T15:30:47.657+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60648 #16 (5 connections now open)
+2017-06-07T15:30:47.683+0800 I ACCESS   [conn16] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:30:47.728+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60649 #17 (6 connections now open)
+2017-06-07T15:30:47.754+0800 I ACCESS   [conn17] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:32:01.675+0800 I -        [conn16] end connection 127.0.0.1:60648 (6 connections now open)
+2017-06-07T15:32:01.676+0800 I -        [conn17] end connection 127.0.0.1:60649 (6 connections now open)
+2017-06-07T15:33:00.561+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60669 #18 (5 connections now open)
+2017-06-07T15:33:00.572+0800 I ACCESS   [conn18] Successfully authenticated as principal __system on local
+2017-06-07T15:33:00.573+0800 I -        [conn18] end connection 127.0.0.1:60669 (5 connections now open)
+2017-06-07T15:33:00.577+0800 I REPL     [replication-1] Choosing new sync source because the config version supplied by localhost:27017, 3, does not match ours, 2
+2017-06-07T15:33:00.577+0800 I REPL     [replication-1] Canceling oplog query due to OplogQueryMetadata. We have to choose a new sync source. Current source: localhost:27017, OpTime { ts: Timestamp 1496820780000|1, t: 1 }, its sync source index:-1
+2017-06-07T15:33:00.577+0800 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27017 (config version: 3; last applied optime: { ts: Timestamp 1496820780000|1, t: 1 }; sync source index: -1; primary index: 0) is no longer valid
+2017-06-07T15:33:00.577+0800 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-06-07T15:33:00.602+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27017: InvalidSyncSource: Sync source was cleared. Was localhost:27017
+2017-06-07T15:33:00.607+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60673 #19 (5 connections now open)
+2017-06-07T15:33:00.628+0800 I ACCESS   [conn19] Successfully authenticated as principal __system on local
+2017-06-07T15:33:00.629+0800 I -        [conn19] end connection 127.0.0.1:60673 (5 connections now open)
+2017-06-07T15:33:00.629+0800 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "rs0", version: 3, protocolVersion: 1, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('59378df6b6b7c67bb04f665a') } }
+2017-06-07T15:33:00.630+0800 I REPL     [ReplicationExecutor] This node is localhost:27019 in the config
+2017-06-07T15:33:14.623+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60674 #20 (5 connections now open)
+2017-06-07T15:33:14.656+0800 I ACCESS   [conn20] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:33:14.697+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60675 #21 (6 connections now open)
+2017-06-07T15:33:14.721+0800 I ACCESS   [conn21] Successfully authenticated as principal adminUser on admin
+2017-06-07T15:33:16.622+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27017
+2017-06-07T15:54:00.107+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61068 #22 (7 connections now open)
+2017-06-07T15:54:00.118+0800 I ACCESS   [conn22] Successfully authenticated as principal __system on local
+2017-06-07T15:54:00.119+0800 I -        [conn22] end connection 127.0.0.1:61068 (7 connections now open)
+2017-06-07T15:54:00.123+0800 I REPL     [replication-0] Choosing new sync source because the config version supplied by localhost:27017, 4, does not match ours, 3
+2017-06-07T15:54:00.123+0800 I REPL     [replication-0] Canceling oplog query due to OplogQueryMetadata. We have to choose a new sync source. Current source: localhost:27017, OpTime { ts: Timestamp 1496822040000|1, t: 1 }, its sync source index:-1
+2017-06-07T15:54:00.123+0800 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27017 (config version: 4; last applied optime: { ts: Timestamp 1496822040000|1, t: 1 }; sync source index: -1; primary index: 0) is no longer valid
+2017-06-07T15:54:00.123+0800 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-06-07T15:54:00.135+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27017: InvalidSyncSource: Sync source was cleared. Was localhost:27017
+2017-06-07T15:54:00.150+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61072 #23 (7 connections now open)
+2017-06-07T15:54:00.165+0800 I ACCESS   [conn23] Successfully authenticated as principal __system on local
+2017-06-07T15:54:00.165+0800 I -        [conn23] end connection 127.0.0.1:61072 (7 connections now open)
+2017-06-07T15:54:00.166+0800 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "rs0", version: 4, protocolVersion: 1, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 0.0, tags: { use: "reporting" }, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('59378df6b6b7c67bb04f665a') } }
+2017-06-07T15:54:00.166+0800 I REPL     [ReplicationExecutor] This node is localhost:27019 in the config
+2017-06-07T15:54:16.173+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27017
+2017-06-07T16:04:52.929+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61309 #24 (7 connections now open)
+2017-06-07T16:04:52.942+0800 I ACCESS   [conn24] Successfully authenticated as principal __system on local
+2017-06-07T16:04:52.942+0800 I -        [conn24] end connection 127.0.0.1:61309 (7 connections now open)
+2017-06-07T16:04:52.947+0800 I REPL     [replication-0] Choosing new sync source because the config version supplied by localhost:27017, 5, does not match ours, 4
+2017-06-07T16:04:52.947+0800 I REPL     [replication-0] Canceling oplog query due to OplogQueryMetadata. We have to choose a new sync source. Current source: localhost:27017, OpTime { ts: Timestamp 1496822692000|1, t: 1 }, its sync source index:-1
+2017-06-07T16:04:52.947+0800 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27017 (config version: 5; last applied optime: { ts: Timestamp 1496822692000|1, t: 1 }; sync source index: -1; primary index: 0) is no longer valid
+2017-06-07T16:04:52.947+0800 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-06-07T16:04:52.960+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27017: InvalidSyncSource: Sync source was cleared. Was localhost:27017
+2017-06-07T16:04:52.973+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:61313 #25 (7 connections now open)
+2017-06-07T16:04:52.993+0800 I ACCESS   [conn25] Successfully authenticated as principal __system on local
+2017-06-07T16:04:52.993+0800 I REPL     [ReplicationExecutor] New replica set config in use: { _id: "rs0", version: 5, protocolVersion: 1, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('59378df6b6b7c67bb04f665a') } }
+2017-06-07T16:04:52.993+0800 I -        [conn25] end connection 127.0.0.1:61313 (7 connections now open)
+2017-06-07T16:04:52.993+0800 I REPL     [ReplicationExecutor] This node is localhost:27019 in the config
+2017-06-07T16:05:14.002+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27017
+2017-06-07T16:15:08.108+0800 I -        [conn20] end connection 127.0.0.1:60674 (6 connections now open)
+2017-06-07T16:15:08.118+0800 I -        [conn21] end connection 127.0.0.1:60675 (5 connections now open)
+2017-06-07T16:15:13.389+0800 I -        [conn5] end connection 127.0.0.1:58122 (4 connections now open)
+2017-06-07T16:15:13.394+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending connection to host localhost:27017 due to bad connection status; 1 connections to that host remain open
+2017-06-07T16:15:13.394+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Failed to close stream: Socket is not connected
+2017-06-07T16:15:13.394+0800 I REPL     [replication-0] Restarting oplog query due to error: HostUnreachable: End of file. Last fetched optime (with hash): { ts: Timestamp 1496823311000|1, t: 1 }[-411559461644777336]. Restarts remaining: 3
+2017-06-07T16:15:13.394+0800 I ASIO     [replication-0] dropping unhealthy pooled connection to localhost:27017
+2017-06-07T16:15:13.394+0800 I ASIO     [replication-0] after drop, pool was empty, going to spawn some connections
+2017-06-07T16:15:13.394+0800 I ASIO     [replication-0] Failed to close stream: Socket is not connected
+2017-06-07T16:15:13.395+0800 I REPL     [replication-0] Scheduled new oplog query Fetcher source: localhost:27017 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1496823311000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 1 } query metadata: { $replData: 1, $oplogQueryData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 65000ms shutting down?: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 33755 -- target:localhost:27017 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1496823311000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 1 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-06-07T16:15:13.395+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-06-07T16:15:13.397+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:13.397+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:13.397+0800 I REPL     [replication-1] Restarting oplog query due to error: HostUnreachable: Connection refused. Last fetched optime (with hash): { ts: Timestamp 1496823311000|1, t: 1 }[-411559461644777336]. Restarts remaining: 2
+2017-06-07T16:15:13.397+0800 I REPL     [replication-1] Scheduled new oplog query Fetcher source: localhost:27017 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1496823311000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 1 } query metadata: { $replData: 1, $oplogQueryData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 65000ms shutting down?: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 33757 -- target:localhost:27017 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1496823311000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 1 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-06-07T16:15:13.397+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-06-07T16:15:13.399+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:13.399+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:13.399+0800 I REPL     [replication-0] Restarting oplog query due to error: HostUnreachable: Connection refused. Last fetched optime (with hash): { ts: Timestamp 1496823311000|1, t: 1 }[-411559461644777336]. Restarts remaining: 1
+2017-06-07T16:15:13.399+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-06-07T16:15:13.399+0800 I REPL     [replication-0] Scheduled new oplog query Fetcher source: localhost:27017 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1496823311000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 1 } query metadata: { $replData: 1, $oplogQueryData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 65000ms shutting down?: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 33759 -- target:localhost:27017 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1496823311000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 1 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-06-07T16:15:13.401+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:13.401+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:13.401+0800 I REPL     [replication-1] Error returned from oplog query (no more query restarts left): HostUnreachable: Connection refused
+2017-06-07T16:15:13.401+0800 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: HostUnreachable: Connection refused
+2017-06-07T16:15:13.401+0800 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-06-07T16:15:13.401+0800 I ASIO     [ReplicationExecutor] dropping unhealthy pooled connection to localhost:27017
+2017-06-07T16:15:13.401+0800 I ASIO     [ReplicationExecutor] after drop, pool was empty, going to spawn some connections
+2017-06-07T16:15:13.401+0800 I ASIO     [ReplicationExecutor] Failed to close stream: Socket is not connected
+2017-06-07T16:15:13.401+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-06-07T16:15:13.403+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:13.403+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:13.403+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-06-07T16:15:13.403+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-06-07T16:15:13.404+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:13.404+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:13.405+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-06-07T16:15:13.405+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-06-07T16:15:13.406+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:13.406+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:13.406+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-06-07T16:15:17.020+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27017: InvalidSyncSource: Sync source was cleared. Was localhost:27017
+2017-06-07T16:15:18.407+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-06-07T16:15:18.409+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:18.409+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:18.409+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-06-07T16:15:18.410+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-06-07T16:15:18.411+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:18.411+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:18.411+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-06-07T16:15:18.411+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-06-07T16:15:18.413+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-06-07T16:15:18.413+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-06-07T16:15:18.414+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-06-07T16:15:18.588+0800 I -        [conn4] end connection 127.0.0.1:58106 (3 connections now open)
+2017-06-07T16:15:21.396+0800 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2017-06-07T16:15:21.396+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-06-07T16:15:21.396+0800 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-06-07T16:15:21.396+0800 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-06-07T16:15:21.397+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27019.sock
+2017-06-07T16:15:21.397+0800 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-06-07T16:15:21.397+0800 I REPL     [signalProcessingThread] shutting down replication subsystems
+2017-06-07T16:15:21.397+0800 I REPL     [signalProcessingThread] Stopping replication reporter thread
+2017-06-07T16:15:21.397+0800 I REPL     [signalProcessingThread] Stopping replication fetcher thread
+2017-06-07T16:15:21.397+0800 I REPL     [signalProcessingThread] Stopping replication applier thread
+2017-06-07T16:15:21.420+0800 I REPL     [signalProcessingThread] Stopping replication storage threads
+2017-06-07T16:15:21.421+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-06-07T16:15:21.426+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-06-07T16:15:21.610+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-06-07T16:15:21.613+0800 I CONTROL  [signalProcessingThread] now exiting
+2017-06-07T16:15:21.613+0800 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-08-22T12:14:43.374+0800 I CONTROL  [main] ***** SERVER RESTARTED *****
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] MongoDB starting : pid=42717 port=27019 dbpath=/Users/amit/mongo/replicaSet/mongo3/data/db 64-bit host=Amits-MacBook-Air.local
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] db version v3.4.4
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] git version: 888390515874a9debd1b6c5d36559ca86b44babd
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.0.2l  25 May 2017
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] allocator: system
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] modules: none
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] build environment:
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten]     distarch: x86_64
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten]     target_arch: x86_64
+2017-08-22T12:14:43.423+0800 I CONTROL  [initandlisten] options: { config: "mongo3/conf.yml", net: { bindIp: "127.0.0.1", port: 27019 }, replication: { replSetName: "rs0" }, security: { keyFile: "/Users/amit/mongo/replicaSet/mongo3/keyfile.txt" }, storage: { dbPath: "/Users/amit/mongo/replicaSet/mongo3/data/db" }, systemLog: { destination: "file", logAppend: true, path: "/Users/amit/mongo/replicaSet/mongo3/mongo.log" } }
+2017-08-22T12:14:43.426+0800 I -        [initandlisten] Detected data files in /Users/amit/mongo/replicaSet/mongo3/data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+2017-08-22T12:14:43.426+0800 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=60,log_size=2GB),statistics_log=(wait=0),
+2017-08-22T12:14:44.522+0800 I STORAGE  [initandlisten] Starting WiredTigerRecordStoreThread local.oplog.rs
+2017-08-22T12:14:44.523+0800 I STORAGE  [initandlisten] The size storer reports that the oplog contains 26387 records totaling to 12854060 bytes
+2017-08-22T12:14:44.525+0800 I STORAGE  [initandlisten] Sampling from the oplog between Jun  7 13:24:06:1 and Jun  7 16:15:11:1 to determine where to place markers for truncation
+2017-08-22T12:14:44.526+0800 I STORAGE  [initandlisten] Taking 7 samples and assuming that each section of oplog contains approximately 37572 records totaling to 18302677 bytes
+2017-08-22T12:14:44.586+0800 I CONTROL  [initandlisten] 
+2017-08-22T12:14:44.586+0800 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. Number of files is 256, should be at least 1000
+2017-08-22T12:14:44.598+0800 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/Users/amit/mongo/replicaSet/mongo3/data/db/diagnostic.data'
+2017-08-22T12:14:44.602+0800 I NETWORK  [thread1] waiting for connections on port 27019
+2017-08-22T12:14:44.637+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57070 #1 (1 connection now open)
+2017-08-22T12:14:44.637+0800 I NETWORK  [conn1] received client metadata from 127.0.0.1:57070 conn1: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T12:14:44.651+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57072 #2 (2 connections now open)
+2017-08-22T12:14:44.651+0800 I REPL     [replExecDBWorker-0] New replica set config in use: { _id: "rs0", version: 5, protocolVersion: 1, members: [ { _id: 0, host: "localhost:27017", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 1, host: "localhost:27018", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 }, { _id: 2, host: "localhost:27019", arbiterOnly: false, buildIndexes: true, hidden: false, priority: 1.0, tags: {}, slaveDelay: 0, votes: 1 } ], settings: { chainingAllowed: true, heartbeatIntervalMillis: 2000, heartbeatTimeoutSecs: 10, electionTimeoutMillis: 10000, catchUpTimeoutMillis: 2000, getLastErrorModes: {}, getLastErrorDefaults: { w: 1, wtimeout: 0 }, replicaSetId: ObjectId('59378df6b6b7c67bb04f665a') } }
+2017-08-22T12:14:44.651+0800 I REPL     [replExecDBWorker-0] This node is localhost:27019 in the config
+2017-08-22T12:14:44.651+0800 I REPL     [replExecDBWorker-0] transition to STARTUP2
+2017-08-22T12:14:44.651+0800 I NETWORK  [conn2] received client metadata from 127.0.0.1:57072 conn2: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T12:14:44.651+0800 I REPL     [replExecDBWorker-0] Starting replication storage threads
+2017-08-22T12:14:44.651+0800 I REPL     [replExecDBWorker-0] Starting replication fetcher thread
+2017-08-22T12:14:44.651+0800 I REPL     [replExecDBWorker-0] Starting replication applier thread
+2017-08-22T12:14:44.651+0800 I REPL     [replExecDBWorker-0] Starting replication reporter thread
+2017-08-22T12:14:44.652+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T12:14:44.652+0800 I REPL     [rsSync] transition to RECOVERING
+2017-08-22T12:14:44.652+0800 I REPL     [rsSync] transition to SECONDARY
+2017-08-22T12:14:44.652+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T12:14:44.698+0800 I ACCESS   [conn1] Successfully authenticated as principal __system on local
+2017-08-22T12:14:44.698+0800 I ACCESS   [conn2] Successfully authenticated as principal __system on local
+2017-08-22T12:14:44.698+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27017, took 46ms (1 connections now open to localhost:27017)
+2017-08-22T12:14:44.698+0800 I REPL     [ReplicationExecutor] Member localhost:27017 is now in state SECONDARY
+2017-08-22T12:14:44.698+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27018, took 46ms (1 connections now open to localhost:27018)
+2017-08-22T12:14:44.698+0800 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state PRIMARY
+2017-08-22T12:14:50.676+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27018
+2017-08-22T12:14:50.677+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27018
+2017-08-22T12:14:50.688+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27018, took 11ms (1 connections now open to localhost:27018)
+2017-08-22T12:14:50.702+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27018
+2017-08-22T12:14:50.717+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27018, took 15ms (2 connections now open to localhost:27018)
+2017-08-22T12:15:08.122+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57087 #3 (3 connections now open)
+2017-08-22T12:15:08.149+0800 I ACCESS   [conn3] Successfully authenticated as principal adminUser on admin
+2017-08-22T12:15:08.186+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57088 #4 (4 connections now open)
+2017-08-22T12:15:08.204+0800 I ACCESS   [conn4] Successfully authenticated as principal adminUser on admin
+2017-08-22T12:15:46.446+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57115 #5 (5 connections now open)
+2017-08-22T12:15:46.467+0800 I ACCESS   [conn5] Successfully authenticated as principal adminUser on admin
+2017-08-22T12:15:46.506+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:57116 #6 (6 connections now open)
+2017-08-22T12:15:46.528+0800 I ACCESS   [conn6] Successfully authenticated as principal adminUser on admin
+2017-08-22T14:07:24.022+0800 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-08-22T14:07:24.183+0800 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-08-22T14:07:24.183+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T14:07:24.185+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T14:07:24.199+0800 I COMMAND  [conn2] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "rs0", configVersion: 5, from: "localhost:27018", fromId: 1, term: 3 } numYields:0 reslen:414 locks:{} protocol:op_command 164ms
+2017-08-22T14:07:24.199+0800 I COMMAND  [conn1] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "rs0", configVersion: 5, from: "localhost:27017", fromId: 0, term: 3 } numYields:0 reslen:414 locks:{} protocol:op_command 151ms
+2017-08-22T14:07:24.209+0800 I REPL     [ReplicationExecutor] VoteRequester(term 3 dry run) received a yes vote from localhost:27017; response message: { term: 3, voteGranted: true, reason: "", ok: 1.0 }
+2017-08-22T14:07:24.209+0800 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-08-22T14:07:24.213+0800 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state SECONDARY
+2017-08-22T14:07:24.279+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60092 #7 (7 connections now open)
+2017-08-22T14:07:24.280+0800 I REPL     [ReplicationExecutor] VoteRequester(term 4) received a no vote from localhost:27017 with reason "already voted for another candidate this term"; response message: { term: 4, voteGranted: false, reason: "already voted for another candidate this term", ok: 1.0 }
+2017-08-22T14:07:24.281+0800 I NETWORK  [conn7] received client metadata from 127.0.0.1:60092 conn7: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:07:24.302+0800 I REPL     [ReplicationExecutor] VoteRequester(term 4) received a yes vote from localhost:27018; response message: { term: 4, voteGranted: true, reason: "", ok: 1.0 }
+2017-08-22T14:07:24.302+0800 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 4
+2017-08-22T14:07:24.302+0800 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-08-22T14:07:24.319+0800 I ACCESS   [conn7] Successfully authenticated as principal __system on local
+2017-08-22T14:07:24.319+0800 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-08-22T14:07:24.320+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27017, took 137ms (2 connections now open to localhost:27017)
+2017-08-22T14:07:24.320+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending idle connection to host localhost:27018 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:07:24.320+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending connection to host localhost:27018 due to bad connection status; 0 connections to that host remain open
+2017-08-22T14:07:24.320+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27018: InvalidSyncSource: Sync source was cleared. Was localhost:27018
+2017-08-22T14:07:24.320+0800 I REPL     [rsBackgroundSync] Replication producer stopped after oplog fetcher finished returning a batch from our sync source.  Abandoning this batch of oplog entries and re-evaluating our sync source.
+2017-08-22T14:07:24.320+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27018, took 137ms (2 connections now open to localhost:27018)
+2017-08-22T14:07:26.190+0800 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-08-22T14:07:30.054+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60138 #8 (8 connections now open)
+2017-08-22T14:07:30.056+0800 I NETWORK  [conn8] received client metadata from 127.0.0.1:60138 conn8: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:07:30.070+0800 I ACCESS   [conn8] Successfully authenticated as principal __system on local
+2017-08-22T14:07:30.073+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60140 #9 (9 connections now open)
+2017-08-22T14:07:30.073+0800 I NETWORK  [conn9] received client metadata from 127.0.0.1:60140 conn9: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:07:30.092+0800 I ACCESS   [conn9] Successfully authenticated as principal __system on local
+2017-08-22T14:07:30.492+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60143 #10 (10 connections now open)
+2017-08-22T14:07:30.492+0800 I NETWORK  [conn10] received client metadata from 127.0.0.1:60143 conn10: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:07:30.506+0800 I ACCESS   [conn10] Successfully authenticated as principal __system on local
+2017-08-22T14:07:30.509+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60145 #11 (11 connections now open)
+2017-08-22T14:07:30.509+0800 I NETWORK  [conn11] received client metadata from 127.0.0.1:60145 conn11: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:07:30.522+0800 I ACCESS   [conn11] Successfully authenticated as principal __system on local
+2017-08-22T14:08:24.288+0800 I -        [conn1] end connection 127.0.0.1:57070 (11 connections now open)
+2017-08-22T14:08:24.323+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending idle connection to host localhost:27017 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:08:24.323+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending idle connection to host localhost:27018 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:20:44.018+0800 I REPL     [ReplicationExecutor] can't see a majority of the set, relinquishing primary
+2017-08-22T14:20:44.170+0800 I REPL     [ReplicationExecutor] Stepping down from primary in response to heartbeat
+2017-08-22T14:20:44.170+0800 I COMMAND  [conn8] command local.oplog.rs command: getMore { getMore: 14109915268, collection: "oplog.rs", maxTimeMS: 5000, term: 4, lastKnownCommittedOpTime: { ts: Timestamp 1503382806000|1, t: 4 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1503381346000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 4 } planSummary: COLLSCAN cursorid:14109915268 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:451 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 32668ms
+2017-08-22T14:20:44.170+0800 I COMMAND  [conn10] command local.oplog.rs command: getMore { getMore: 15283419452, collection: "oplog.rs", maxTimeMS: 5000, term: 4, lastKnownCommittedOpTime: { ts: Timestamp 1503382806000|1, t: 4 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1503381346000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 4 } planSummary: COLLSCAN cursorid:15283419452 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:451 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 32668ms
+2017-08-22T14:20:44.171+0800 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state SECONDARY
+2017-08-22T14:20:44.178+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60406 #12 (11 connections now open)
+2017-08-22T14:20:44.179+0800 I COMMAND  [conn9] command admin.$cmd command: replSetUpdatePosition { replSetUpdatePosition: 1, optimes: [ { durableOpTime: { ts: Timestamp 1503382806000|1, t: 4 }, appliedOpTime: { ts: Timestamp 1503382806000|1, t: 4 }, memberId: 0, cfgver: 5 }, { durableOpTime: { ts: Timestamp 1503382806000|1, t: 4 }, appliedOpTime: { ts: Timestamp 1503382806000|1, t: 4 }, memberId: 1, cfgver: 5 }, { durableOpTime: { ts: Timestamp 1503381346000|1, t: 3 }, appliedOpTime: { ts: Timestamp 1503381346000|1, t: 3 }, memberId: 2, cfgver: 5 } ], $replData: { term: 4, lastOpCommitted: { ts: Timestamp 1503382806000|1, t: 4 }, lastOpVisible: { ts: Timestamp 0|0, t: -1 }, configVersion: 5, replicaSetId: ObjectId('59378df6b6b7c67bb04f665a'), primaryIndex: 2, syncSourceIndex: 2 } } numYields:0 reslen:22 locks:{} protocol:op_command 160ms
+2017-08-22T14:20:44.181+0800 I NETWORK  [conn12] received client metadata from 127.0.0.1:60406 conn12: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:20:44.181+0800 I REPL     [replExecDBWorker-2] transition to SECONDARY
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] legacy transport layer closing all connections
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 12
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 11
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 10
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 9
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 8
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 7
+2017-08-22T14:20:44.181+0800 I NETWORK  [replExecDBWorker-2] Skip closing connection for connection # 2
+2017-08-22T14:20:44.181+0800 I -        [conn6] end connection 127.0.0.1:57116 (11 connections now open)
+2017-08-22T14:20:44.182+0800 I -        [conn5] end connection 127.0.0.1:57115 (11 connections now open)
+2017-08-22T14:20:44.182+0800 I -        [conn4] end connection 127.0.0.1:57088 (11 connections now open)
+2017-08-22T14:20:44.182+0800 I -        [conn3] end connection 127.0.0.1:57087 (11 connections now open)
+2017-08-22T14:20:44.182+0800 I COMMAND  [conn7] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "rs0", configVersion: 5, from: "localhost:27017", fromId: 0, term: 4 } numYields:0 reslen:405 locks:{} protocol:op_command 154ms
+2017-08-22T14:20:44.182+0800 I REPL     [ReplicationExecutor] Member localhost:27017 is now in state SECONDARY
+2017-08-22T14:20:44.195+0800 I ACCESS   [conn12] Successfully authenticated as principal __system on local
+2017-08-22T14:20:59.190+0800 I REPL     [ReplicationExecutor] Member localhost:27017 is now in state PRIMARY
+2017-08-22T14:21:00.084+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27017
+2017-08-22T14:21:00.085+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-08-22T14:21:00.097+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27017, took 12ms (1 connections now open to localhost:27017)
+2017-08-22T14:21:00.098+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-08-22T14:21:00.110+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27017, took 12ms (2 connections now open to localhost:27017)
+2017-08-22T14:21:44.183+0800 I -        [conn9] end connection 127.0.0.1:60140 (7 connections now open)
+2017-08-22T14:21:44.189+0800 I -        [conn11] end connection 127.0.0.1:60145 (6 connections now open)
+2017-08-22T14:21:54.714+0800 I -        [conn12] end connection 127.0.0.1:60406 (5 connections now open)
+2017-08-22T14:21:57.687+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60488 #13 (5 connections now open)
+2017-08-22T14:21:57.719+0800 I ACCESS   [conn13] Successfully authenticated as principal adminUser on admin
+2017-08-22T14:22:18.688+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60491 #14 (6 connections now open)
+2017-08-22T14:22:18.726+0800 I ACCESS   [conn14] Successfully authenticated as principal adminUser on admin
+2017-08-22T14:22:49.822+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60506 #15 (7 connections now open)
+2017-08-22T14:22:49.856+0800 I ACCESS   [conn15] Successfully authenticated as principal adminUser on admin
+2017-08-22T14:23:18.690+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60510 #16 (8 connections now open)
+2017-08-22T14:23:18.728+0800 I ACCESS   [conn16] Successfully authenticated as principal adminUser on admin
+2017-08-22T14:25:44.196+0800 I -        [conn8] end connection 127.0.0.1:60138 (8 connections now open)
+2017-08-22T14:25:44.220+0800 I -        [conn10] end connection 127.0.0.1:60143 (7 connections now open)
+2017-08-22T14:52:28.023+0800 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-08-22T14:52:28.023+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending idle connection to host localhost:27017 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:52:28.169+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending connection to host localhost:27017 due to bad connection status; 0 connections to that host remain open
+2017-08-22T14:52:28.170+0800 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-08-22T14:52:28.170+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T14:52:28.170+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T14:52:28.170+0800 I REPL     [replication-2] Restarting oplog query due to error: ExceededTimeLimit: Operation timed out, request was RemoteCommand 22104 -- target:localhost:27017 db:local expDate:2017-08-22T14:27:51.065+0800 cmd:{ getMore: 13641307194, collection: "oplog.rs", maxTimeMS: 5000, term: 6, lastKnownCommittedOpTime: { ts: Timestamp 1503383206000|1, t: 6 } }. Last fetched optime (with hash): { ts: Timestamp 1503383206000|1, t: 6 }[6281792989051532757]. Restarts remaining: 3
+2017-08-22T14:52:28.170+0800 I REPL     [replication-2] Scheduled new oplog query Fetcher source: localhost:27017 database: local query: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1503383206000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 6 } query metadata: { $replData: 1, $oplogQueryData: 1, $ssm: { $secondaryOk: true } } active: 1 timeout: 65000ms shutting down?: 0 first: 1 firstCommandScheduler: RemoteCommandRetryScheduler request: RemoteCommand 22122 -- target:localhost:27017 db:local cmd:{ find: "oplog.rs", filter: { ts: { $gte: Timestamp 1503383206000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 6 } active: 1 callbackHandle.valid: 1 callbackHandle.cancelled: 0 attempt: 1 retryPolicy: RetryPolicyImpl maxAttempts: 1 maxTimeMillis: -1ms
+2017-08-22T14:52:28.170+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-08-22T14:52:28.171+0800 I COMMAND  [conn7] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "rs0", configVersion: 5, from: "localhost:27017", fromId: 0, term: 6 } numYields:0 reslen:414 locks:{} protocol:op_command 147ms
+2017-08-22T14:52:28.171+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27017
+2017-08-22T14:52:28.171+0800 I COMMAND  [conn2] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "rs0", configVersion: 5, from: "localhost:27018", fromId: 1, term: 6 } numYields:0 reslen:414 locks:{} protocol:op_command 141ms
+2017-08-22T14:52:28.185+0800 I REPL     [ReplicationExecutor] VoteRequester(term 6 dry run) received a yes vote from localhost:27018; response message: { term: 6, voteGranted: true, reason: "", ok: 1.0 }
+2017-08-22T14:52:28.185+0800 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-08-22T14:52:28.185+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending connection to host localhost:27017 due to bad connection status; 1 connections to that host remain open
+2017-08-22T14:52:28.224+0800 I REPL     [ReplicationExecutor] VoteRequester(term 7) received a no vote from localhost:27018 with reason "already voted for another candidate this term"; response message: { term: 7, voteGranted: false, reason: "already voted for another candidate this term", ok: 1.0 }
+2017-08-22T14:52:28.391+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60613 #17 (7 connections now open)
+2017-08-22T14:52:28.393+0800 I NETWORK  [conn17] received client metadata from 127.0.0.1:60613 conn17: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:52:28.498+0800 I ACCESS   [conn17] Successfully authenticated as principal __system on local
+2017-08-22T14:52:28.499+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27017, took 329ms (2 connections now open to localhost:27017)
+2017-08-22T14:52:28.499+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27017, took 329ms (2 connections now open to localhost:27017)
+2017-08-22T14:52:28.499+0800 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: Sync source's last applied OpTime { ts: Timestamp 1503383206000|1, t: 6 } is not greater than our last fetched OpTime { ts: Timestamp 1503383206000|1, t: 6 }. Choosing new sync source.
+2017-08-22T14:52:28.499+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27017, took 329ms (1 connections now open to localhost:27017)
+2017-08-22T14:52:28.499+0800 I REPL     [rsBackgroundSync] could not find member to sync from
+2017-08-22T14:52:28.499+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27018, took 329ms (2 connections now open to localhost:27018)
+2017-08-22T14:52:28.500+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T14:52:28.500+0800 I REPL     [ReplicationExecutor] VoteRequester(term 7) received a no vote from localhost:27017 with reason "already voted for another candidate this term"; response message: { term: 7, voteGranted: false, reason: "already voted for another candidate this term", ok: 1.0 }
+2017-08-22T14:52:28.500+0800 I REPL     [ReplicationExecutor] not becoming primary, we received insufficient votes
+2017-08-22T14:52:28.500+0800 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state PRIMARY
+2017-08-22T14:52:28.500+0800 I REPL     [ReplicationExecutor] Member localhost:27017 is now in state SECONDARY
+2017-08-22T14:52:28.517+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27017, took 18ms (2 connections now open to localhost:27017)
+2017-08-22T14:52:33.501+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27017: InvalidSyncSource: Sync source was cleared. Was localhost:27017
+2017-08-22T14:52:33.518+0800 I REPL     [rsBackgroundSync] sync source candidate: localhost:27018
+2017-08-22T14:52:33.518+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27018
+2017-08-22T14:52:33.542+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27018, took 24ms (1 connections now open to localhost:27018)
+2017-08-22T14:52:33.543+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Connecting to localhost:27018
+2017-08-22T14:52:33.557+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Successfully connected to localhost:27018, took 14ms (2 connections now open to localhost:27018)
+2017-08-22T14:53:28.253+0800 I -        [conn2] end connection 127.0.0.1:57072 (7 connections now open)
+2017-08-22T14:53:28.504+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending idle connection to host localhost:27018 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:53:28.505+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending idle connection to host localhost:27017 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:53:28.505+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending idle connection to host localhost:27017 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:54:28.023+0800 I REPL     [ReplicationExecutor] Starting an election, since we've seen no PRIMARY in the past 10000ms
+2017-08-22T14:54:28.160+0800 I REPL     [ReplicationExecutor] conducting a dry run election to see if we could be elected
+2017-08-22T14:54:28.161+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T14:54:28.162+0800 I COMMAND  [conn7] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "rs0", configVersion: 5, from: "localhost:27017", fromId: 0, term: 7 } numYields:0 reslen:414 locks:{} protocol:op_command 137ms
+2017-08-22T14:54:28.162+0800 I COMMAND  [conn17] command admin.$cmd command: replSetHeartbeat { replSetHeartbeat: "rs0", configVersion: 5, from: "localhost:27018", fromId: 1, term: 7 } numYields:0 reslen:414 locks:{} protocol:op_command 137ms
+2017-08-22T14:54:28.162+0800 I REPL     [ReplicationExecutor] VoteRequester(term 7 dry run) received a yes vote from localhost:27017; response message: { term: 7, voteGranted: true, reason: "", ok: 1.0 }
+2017-08-22T14:54:28.163+0800 I REPL     [ReplicationExecutor] dry election run succeeded, running for election
+2017-08-22T14:54:28.163+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending connection to host localhost:27018 due to bad connection status; 1 connections to that host remain open
+2017-08-22T14:54:28.203+0800 I REPL     [ReplicationExecutor] VoteRequester(term 8) received a yes vote from localhost:27017; response message: { term: 8, voteGranted: true, reason: "", ok: 1.0 }
+2017-08-22T14:54:28.203+0800 I REPL     [ReplicationExecutor] election succeeded, assuming primary role in term 8
+2017-08-22T14:54:28.203+0800 I REPL     [ReplicationExecutor] transition to PRIMARY
+2017-08-22T14:54:28.203+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T14:54:28.203+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T14:54:28.203+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T14:54:28.210+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60734 #18 (7 connections now open)
+2017-08-22T14:54:28.210+0800 I NETWORK  [conn18] received client metadata from 127.0.0.1:60734 conn18: { driver: { name: "NetworkInterfaceASIO-Replication", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:54:28.233+0800 I REPL     [SyncSourceFeedback] SyncSourceFeedback error sending update to localhost:27018: InvalidSyncSource: Sync source was cleared. Was localhost:27018
+2017-08-22T14:54:28.245+0800 W REPL     [rsBackgroundSync] Fetcher stopped querying remote oplog with error: InvalidSyncSource: sync source localhost:27018 (config version: 5; last applied optime: { ts: Timestamp 1503384850000|1, t: 7 }; sync source index: -1; primary index: -1) is no longer valid
+2017-08-22T14:54:28.271+0800 I ACCESS   [conn18] Successfully authenticated as principal __system on local
+2017-08-22T14:54:28.285+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27017, took 82ms (2 connections now open to localhost:27017)
+2017-08-22T14:54:28.287+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27018, took 126ms (3 connections now open to localhost:27018)
+2017-08-22T14:54:28.287+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27018, took 84ms (3 connections now open to localhost:27018)
+2017-08-22T14:54:28.287+0800 I REPL     [ReplicationExecutor] My optime is most up-to-date, skipping catch-up and completing transition to primary.
+2017-08-22T14:54:28.287+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Successfully connected to localhost:27018, took 84ms (3 connections now open to localhost:27018)
+2017-08-22T14:54:28.287+0800 I REPL     [ReplicationExecutor] Member localhost:27018 is now in state SECONDARY
+2017-08-22T14:54:30.181+0800 I REPL     [rsSync] transition to primary complete; database writes are now permitted
+2017-08-22T14:54:33.309+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60761 #19 (8 connections now open)
+2017-08-22T14:54:33.309+0800 I NETWORK  [conn19] received client metadata from 127.0.0.1:60761 conn19: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:54:33.322+0800 I ACCESS   [conn19] Successfully authenticated as principal __system on local
+2017-08-22T14:54:33.324+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60763 #20 (9 connections now open)
+2017-08-22T14:54:33.325+0800 I NETWORK  [conn20] received client metadata from 127.0.0.1:60763 conn20: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:54:33.336+0800 I ACCESS   [conn20] Successfully authenticated as principal __system on local
+2017-08-22T14:54:34.050+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60766 #21 (10 connections now open)
+2017-08-22T14:54:34.053+0800 I NETWORK  [conn21] received client metadata from 127.0.0.1:60766 conn21: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:54:34.067+0800 I ACCESS   [conn21] Successfully authenticated as principal __system on local
+2017-08-22T14:54:34.069+0800 I NETWORK  [thread1] connection accepted from 127.0.0.1:60768 #22 (11 connections now open)
+2017-08-22T14:54:34.069+0800 I NETWORK  [conn22] received client metadata from 127.0.0.1:60768 conn22: { driver: { name: "NetworkInterfaceASIO-RS", version: "3.4.4" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "16.6.0" } }
+2017-08-22T14:54:34.081+0800 I ACCESS   [conn22] Successfully authenticated as principal __system on local
+2017-08-22T14:55:15.264+0800 I ASIO     [NetworkInterfaceASIO-RS-0] Ending idle connection to host localhost:27018 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:55:28.229+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending idle connection to host localhost:27017 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T14:55:28.278+0800 I -        [conn18] end connection 127.0.0.1:60734 (11 connections now open)
+2017-08-22T14:55:28.295+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending idle connection to host localhost:27018 because the pool meets constraints; 2 connections to that host remain open
+2017-08-22T14:55:28.296+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Ending idle connection to host localhost:27018 because the pool meets constraints; 1 connections to that host remain open
+2017-08-22T15:17:46.117+0800 I COMMAND  [conn20] command local.oplog.rs command: getMore { getMore: 14179528554, collection: "oplog.rs", maxTimeMS: 5000, term: 8, lastKnownCommittedOpTime: { ts: Timestamp 1503386260000|1, t: 8 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1503384850000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 8 } planSummary: COLLSCAN cursorid:14179528554 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:451 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 5374ms
+2017-08-22T15:17:46.117+0800 I COMMAND  [conn21] command local.oplog.rs command: getMore { getMore: 13514227283, collection: "oplog.rs", maxTimeMS: 5000, term: 8, lastKnownCommittedOpTime: { ts: Timestamp 1503386260000|1, t: 8 } } originatingCommand: { find: "oplog.rs", filter: { ts: { $gte: Timestamp 1503384850000|1 } }, tailable: true, oplogReplay: true, awaitData: true, maxTimeMS: 60000, term: 8 } planSummary: COLLSCAN cursorid:13514227283 keysExamined:0 docsExamined:0 numYields:0 nreturned:0 reslen:451 locks:{ Global: { acquireCount: { r: 4 } }, Database: { acquireCount: { r: 2 } }, oplog: { acquireCount: { r: 2 } } } protocol:op_command 5374ms
+2017-08-22T15:48:14.849+0800 I -        [conn20] end connection 127.0.0.1:60763 (10 connections now open)
+2017-08-22T15:48:14.849+0800 I -        [conn7] end connection 127.0.0.1:60092 (10 connections now open)
+2017-08-22T15:48:14.916+0800 I ASIO     [ReplicationExecutor] dropping unhealthy pooled connection to localhost:27017
+2017-08-22T15:48:14.916+0800 I ASIO     [ReplicationExecutor] after drop, pool was empty, going to spawn some connections
+2017-08-22T15:48:14.916+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:14.918+0800 I ASIO     [ReplicationExecutor] Failed to close stream: Socket is not connected
+2017-08-22T15:48:14.918+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:14.919+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:14.919+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:14.919+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:14.920+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:14.920+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:14.920+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:14.920+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:14.921+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:14.921+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:14.921+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:16.733+0800 I -        [conn19] end connection 127.0.0.1:60761 (8 connections now open)
+2017-08-22T15:48:16.922+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:16.923+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:16.923+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:16.923+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:16.924+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:16.925+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:16.925+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:16.925+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:16.925+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:16.926+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:16.926+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:16.926+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:18.606+0800 I -        [conn22] end connection 127.0.0.1:60768 (7 connections now open)
+2017-08-22T15:48:18.606+0800 I -        [conn17] end connection 127.0.0.1:60613 (7 connections now open)
+2017-08-22T15:48:18.921+0800 I ASIO     [ReplicationExecutor] dropping unhealthy pooled connection to localhost:27018
+2017-08-22T15:48:18.921+0800 I ASIO     [ReplicationExecutor] after drop, pool was empty, going to spawn some connections
+2017-08-22T15:48:18.921+0800 I ASIO     [ReplicationExecutor] Failed to close stream: Socket is not connected
+2017-08-22T15:48:18.921+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:18.922+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:18.922+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:18.922+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:18.922+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:18.923+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:18.923+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:18.923+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:18.923+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:18.924+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:18.924+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:18.924+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:18.926+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:18.929+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:18.929+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:18.929+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:18.929+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:18.932+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:18.932+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:18.932+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:18.932+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:18.933+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:18.933+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:18.933+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:20.928+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:20.929+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:20.929+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:20.930+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:20.930+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:20.931+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:20.931+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:20.931+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:20.931+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:20.933+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:20.933+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:20.933+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:20.933+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:20.934+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:20.934+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:20.934+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:20.934+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:20.935+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:20.935+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:20.935+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:20.935+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:20.936+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:20.936+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:20.936+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:21.702+0800 I -        [conn21] end connection 127.0.0.1:60766 (5 connections now open)
+2017-08-22T15:48:22.937+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:22.937+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:22.938+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:22.938+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:22.938+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:22.938+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:22.939+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:22.939+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:22.939+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:22.939+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:22.939+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:22.940+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:22.940+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:22.940+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27018
+2017-08-22T15:48:22.940+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:22.940+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:22.940+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:22.940+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Connecting to localhost:27017
+2017-08-22T15:48:22.941+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27018 - HostUnreachable: Connection refused
+2017-08-22T15:48:22.941+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27018 due to failed operation on a connection
+2017-08-22T15:48:22.941+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27018; HostUnreachable: Connection refused
+2017-08-22T15:48:22.941+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Failed to connect to localhost:27017 - HostUnreachable: Connection refused
+2017-08-22T15:48:22.941+0800 I ASIO     [NetworkInterfaceASIO-Replication-0] Dropping all pooled connections to localhost:27017 due to failed operation on a connection
+2017-08-22T15:48:22.941+0800 I REPL     [ReplicationExecutor] Error in heartbeat request to localhost:27017; HostUnreachable: Connection refused
+2017-08-22T15:48:23.626+0800 I CONTROL  [signalProcessingThread] got signal 2 (Interrupt: 2), will terminate after current cmd ends
+2017-08-22T15:48:23.626+0800 I NETWORK  [signalProcessingThread] shutdown: going to close listening sockets...
+2017-08-22T15:48:23.628+0800 I NETWORK  [signalProcessingThread] closing listening socket: 7
+2017-08-22T15:48:23.628+0800 I NETWORK  [signalProcessingThread] closing listening socket: 8
+2017-08-22T15:48:23.629+0800 I NETWORK  [signalProcessingThread] removing socket file: /tmp/mongodb-27019.sock
+2017-08-22T15:48:23.629+0800 I NETWORK  [signalProcessingThread] shutdown: going to flush diaglog...
+2017-08-22T15:48:23.629+0800 I REPL     [signalProcessingThread] shutting down replication subsystems
+2017-08-22T15:48:23.629+0800 I REPL     [signalProcessingThread] Stopping replication reporter thread
+2017-08-22T15:48:23.629+0800 I REPL     [signalProcessingThread] Stopping replication fetcher thread
+2017-08-22T15:48:23.629+0800 I REPL     [signalProcessingThread] Stopping replication applier thread
+2017-08-22T15:48:23.892+0800 I REPL     [signalProcessingThread] Stopping replication storage threads
+2017-08-22T15:48:23.899+0800 I FTDC     [signalProcessingThread] Shutting down full-time diagnostic data capture
+2017-08-22T15:48:23.907+0800 I STORAGE  [signalProcessingThread] WiredTigerKVEngine shutting down
+2017-08-22T15:48:24.109+0800 I STORAGE  [signalProcessingThread] shutdown: removing fs lock...
+2017-08-22T15:48:24.113+0800 I CONTROL  [signalProcessingThread] now exiting
+2017-08-22T15:48:24.113+0800 I CONTROL  [signalProcessingThread] shutting down with code:0
+2017-08-22T15:48:24.113+0800 I CONTROL  [initandlisten] shutting down with code:0

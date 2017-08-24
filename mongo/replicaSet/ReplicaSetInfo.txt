@@ -1,0 +1,97 @@
+1. Create a keyfile
+openssl rand -base64 756 > ~/mongo/keyfile.txt
+chmod 400 ~/mongo/keyfile.txt
+
+2. Copy the keyfile to each replica set member
+
+3. Create a configuration file (conf.yml). Sample config:
+  systemLog:
+  destination: file
+  path: /Users/amit/mongo/replicaSet/mongo1/mongo.log
+  logAppend: true
+storage:
+  dbPath: /Users/amit/mongo/replicaSet/mongo1/data/db
+net:
+  port: 27017
+  bindIp: 127.0.0.1
+security:
+  keyFile: /Users/amit/mongo/replicaSet/mongo1/keyfile.txt
+replication:
+  replSetName: rs0
+  
+  
+4. Copy the mongo.log file to each replica set member. Also copy the conf.yml file to each replica set member and modify it
+for the respective replica member.
+   
+5. Start mongod process using the config file:
+   mongod --config /Users/amit/mongo/replicaSet/mongo1/conf.yml
+   
+   Repeat the same for other replica set members as well.
+   
+6. Start a mongo shell and connect to anyone of the members. Execute the following:
+
+rs.initiate(
+  {
+    _id : "rs0",
+    members: [
+      { _id : 0, host : "localhost:27017" },
+      { _id : 1, host : "localhost:27018" },
+      { _id : 2, host : "localhost:27019" }
+    ]
+  }
+)
+  
+7. Create an admin user for all databases. Execute this from the mongo shell:
+
+admin = db.getSiblingDB("admin")
+admin.createUser(
+  {
+    user: "adminUser",
+    pwd: "toughPassword",
+    roles: [ { role: "root", db: "admin" } ]
+  }
+)
+
+8. Authenticate to the admin database.
+
+db.getSiblingDB("admin").auth("adminUser", "toughPassword" )
+
+9. Create a cluster admin. Execute this:
+
+db.getSiblingDB("admin").createUser(
+  {
+    "user" : "clusterAdminUser",
+    "pwd" : "toughPassword",
+    roles: [ { "role" : "clusterAdmin", "db" : "admin" } ]
+  }
+)
+
+
+Reference:
+https://docs.mongodb.com/manual/tutorial/deploy-replica-set-with-keyfile-access-control/#deploy-repl-set-with-auth
+
+For production, X.509 should be used instead of keyfile:
+https://docs.mongodb.com/manual/tutorial/upgrade-keyfile-to-x509/
+
+
+------------Reporting:---------------
+A secondary can be dedicated to be used as a database dedicate for reporting. 
+Execute the following from mongo shell(logged in as clusterAdminUser)
+
+cfg = rs.conf()
+cfg.members[<indexOfSecondary>].hidden=true
+cfg.members[<indexOfSecondary>].priority=0
+rs.reconfig(cfg)
+
+This secondary member will now be hidden and not be reported when db.isMaster() is called. And since the priority is 0,
+it can't become a member. Replication will be as usual and it would still participate in voting.
+For reporting purposes, clients can connect to the secondary member directly as a standalone instance.
+
+Drawback with this approach is that this instance can't be connected to (by the replica set client) in case of failover.
+------Other approach is this:
+cfg = rs.conf()
+cfg.members[2].priority=0
+cfg.members[2].tags={"use":"reporting"}
+
+The reporting client can then set a read preference for secondary, and also specify tags "use":"reporting".
+Reference: https://devops.com/mongodb-replication-pro-tips/
